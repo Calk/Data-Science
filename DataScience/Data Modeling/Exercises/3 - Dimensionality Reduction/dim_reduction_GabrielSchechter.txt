@@ -1,0 +1,8 @@
+1 - All the datasets in the center row, the first and last datasets of the
+first row and maybe the datasets that have 0.8 and -0.8 correlation coefficients.
+All these datasets could be projected into one PCA component vector without losing much information.
+Almost all the variation of the variables would be captured by the projection into just one component.
+
+2 - Since the smaples already has two dimensions,
+applying PCA would not reduce the dimentionality of our datasets and could cause lost of information.
+

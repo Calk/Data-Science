@@ -1,0 +1,63 @@
+Apache Spark has very predicted releases and is trusted.
+Huge community working on it.
+Spark is the standard for dealing with Big Data technologies.
+https://databricks.com/ - Reference web platform Spark
+Spark is better than Hadoop nowadays.
+
+http://spark.apache.org/graphx/
+http://spark.apache.org/mllib/
+https://spark-packages.org/
+
+Sharding and Table joins are really expensive computationally 
+That is why Big Data can be a better option
+ORM adds a great overhead for situations with volatile schemas
+
+MongoDB, HBAse and Redis does not have a high avaiability (it is not fully distributed).
+Graph Database are very hard to distribute.
+
+Kafka and Spark talk very well.
+Spark does not run on Windows.
+In a distributted system you has a distributed configuration file.
+
+Haddop(+Sparks) Distributions
+Cloudera
+Mapr
+Datastax
+Elastic MapReduce (Amazon)
+
+https://jenkins.io/ - Built in Automation
+
+Cluster - bunch of computers connected to each other someway. You can have a cluster with one machine.
+An Apache Spark cluster has a master.
+
+http://spark.apache.org/
+Dont try to run this into Windows. It was not made to run on windows. Set it in VM or use databricks
+RDD - Resilient Distributed Datasets
+RDDs are lazy loaded and only are changed after an action.
+Spart is not a data storage framework, it is a computational framework.
+I can configure to run the computation in my local machine accessing remote dataset.
+The artifcat of a spark application is a jar file. Needs to specify the main class of the application.
+I need to ask resources for my application and I have to configure that.
+You can load any python library you like with the notion that this library is in the context you are running.
+The arguments for configuration are passed to the master of each cluster.
+We might prefer to use multiple computation nodes because you can reduce the computational time by sharding the data files.
+You can have partition (sharding) of replicated data whithin different machines in the same cluster.
+default replication factor is 3 in HDFS.
+You have two type of nodes: computational nodes and data nodes. They can be combined but depends on the deployment.
+The computational nodes are the workers in the spark concept.
+Worker is a logical node. One work do one task at a time.
+It is good practice to have homogeneous worker configurations in the same cluster.
+
+-->Spark Core
+The basics of the spark framework is built in Scala (functional programming)
+Python implements the Spark API.
+Count is a simple acton that can trigger the lazy loading and is used commonly.
+it is better to use forEachPartition instead of foreach.
+You can use SQL Join in the Spark Framework.
+
+
+
+
+
+
+

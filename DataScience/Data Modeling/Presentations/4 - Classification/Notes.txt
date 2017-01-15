@@ -1,0 +1,31 @@
+--->Classifications
+
+The problem of dimensionality is specially important in the kNN algorithmn.
+This happenns because high dimension dataset tend to have a very sparse distribution of observations.
+Since the knn algo regards on 'euclidian distance', it cannot perform well in those scenarios.
+A possible solution for this problem could be to use PCA in order to reduce de dimension of the dataset.
+
+People dont use decision trees today, they prefer to use random forest 
+since it generates a lot of decision trees and get the average decision.
+
+3 greatest classifiers:
+Random forest
+SVM - Support Vector Machines
+Deep Learning (more recent)
+
+--->Ensemble
+Create Multiple Datasets for training, build multiple classifiers and finally combine classifiers.
+Combine Classifiers with weights (boosting) or selecting the majority of the votes (bagging)
+Random Forest is an ensemble classifier. Normally a Random Forest puts the same weight at each of the decision trees generates.
+Random forests is one of the best classifiers. Handles thousands of input variables without deletion.
+The really problem is that random forest is proned to overfitting.
+the median is more resistant to outliers than the mean, and this is why decision trees are resistance to outliers.
+'over training' = 'overfitting'
+
+---->Clustering
+Type of unsupervised Learning because I don't have the labels.
+K meand algorithm is the most used one. Find the right number of k clusters is kind of an art.
+The outliers can considerable cause trouble to k clusters (because it is based on the mean)
+other algos are Hierarchical Clustering and Gaussian Mixture Models and EM (GMM-EM)
+
+

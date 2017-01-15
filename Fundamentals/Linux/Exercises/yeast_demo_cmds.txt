@@ -1,0 +1,49 @@
+###################################################
+# Exploring the Baker's Yeast genome with the shell
+###################################################
+
+# Download the html page holding the links to the data files from here: ftp://hgdownload.cse.ucsc.edu/goldenPath/currentGenomes/Saccharomyces_cerevisiae/chromosomes/
+# Save it as index.html
+
+# Download all files in the page
+
+   for i in $(grep FILE index.html | cut -f 2 -d '"' | grep -v readme  ); do wget ftp://hgdownload.cse.ucsc.edu/goldenPath/currentGenomes/Saccharomyces_cerevisiae/chromosomes/$i ; done
+
+# Calculate md5 hash code for one file
+
+   md5sum chrXII.fa.gz 
+
+# Calculating md5 hash codes for all files, feed it into md5sum to compare the output with the downloaded md5sum.txt file md5 hash
+
+   md5sum *.fa.gz  | md5sum 
+   md5sum md5sum.txt 
+
+# Alternate way to compare the hash codes of our downloaded files to those published on the web page (each file and code should appear twice)
+
+   md5sum *.fa.gz  | cat md5sum.txt -  | sort | uniq -c 
+
+# count the number of characters in a typical line (second line) in two methods
+
+   zcat chrI.fa.gz | tail -n +2 | head -n 1 | wc
+   zcat chrI.fa.gz | tail -n +2 | head -n 1 | awk '{ print length($1); } '
+
+# inspect the actual characters with od
+   zcat chrI.fa.gz | tail -n +2 | head -n 1 | od -ax
+
+# Check that all lines have 50 characters in them (except the last one..)
+   zcat chrI.fa.gz | tail -n +2  | awk '{ print length($1); } ' | uniq -c
+
+# Two methods to calculate the total number of nucleotides in the chromosome (number of characters)
+   zcat chrI.fa.gz | tail -n +2  | awk '{ s += length($1); } END { print s; }'
+   zcat chrI.fa.gz | tail -n +2  | tr -d '\n' | wc
+
+# Calculate a nucleotide count of one chromosome (nucleotide  = A|C|G|T)
+   zcat chrI.fa.gz | tail -n +2  | fold -w 1 | sort | uniq -c
+
+# Calculate the fraction of each nucleotide
+   zcat chrV.fa.gz | tail -n +2  | fold -w 1 | awk '{ cnt[$i] += 1 ; s += 1; } END { for (x in cnt) {print x, cnt[x]/s;} }' 
+
+# Calculate mean fraction per nucleotide across all chromosomes
+   touch stat
+   for f in chr*gz; do zcat $f | tail -n +2  | fold -w 1 | awk '     { cnt[$1] += 1 ; s += 1; } END { for (x in cnt) {print x, cnt[x]/s;} }' >> stat ; done
+   cat stat | awk ' { s[$1] += $2; cnt[$1] += 1; } END { for (x in s) { print x, s[x]/cnt[x]; }}'

@@ -1,0 +1,13 @@
+grep http places.txt | sed 's/https/http/g'| cut -f 3 -d '/' |sort | uniq -c | sort -rn | head -n 10
+32 news.bbc.co.uk
+19 mail.google.com
+16 co101w.col101.mail.live.com
+14 bl120w.blu120.mail.live.com
+13 login.live.com
+13 dashboard.aim.com
+8 www.google.com
+7 ad.doubleclick.net
+6 signup.live.com
+6 my.screenname.aol.com
+
+

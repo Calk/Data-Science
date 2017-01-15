@@ -1,0 +1,13 @@
+The problem of dimensionality is specially important in the kNN algorithmn.
+This happenns because high dimension dataset tend to have a very sparse distribution of observations.
+Since the knn algo regards on 'euclidian distance', it cannot perform well in those scenarios.
+A possible solution for this problem could be to use PCA in order to reduce de dimension of the dataset.
+
+People dont use decision trees today, they prefer to use random forest 
+since it generates a lot of decision trees and get the average decision.
+
+3 greatest classifiers:
+Random forest
+SVM - Support Vector Machines
+Deep Learning (more recent)
+

@@ -1,0 +1,98 @@
+--->Machine Learning Review
+Features are also called covariates.
+Usually in classification you dont use multiclass-classification, it is better to do incremental binary classifications.
+The labels are the value you are trying to predict
+
+--->Model Evaluation
+-> Performance Metrics
+Precision - Predict email spam - hhow accurate you are in your predictions for all cases.
+Recall - how many you predict correctly.
+F1 measure combines the two concepts.
+Specificity VS Sensitivity = Presision VS Recall
+ROC curve - False positive rate X True Positive rate - 0.5(Bad) to 1.0(very good) is the range of the area under the curve.
+ROC curve is a great way to evaluate your performance.
+
+->Hold out Evaluation
+Dont train with what you are goin to test - Generate bias.
+Sometimes you can simulate data (even replicate more rare results to give them weight)
+Unbiased data - reflex the real distribution of the population.
+Try always not give biased results and collect more valuable data.
+Ideal is to test your modl with real case data
+Sometimes you do machine learning just to find the important features.
+After running model in the test set you will get the final result.
+Three way split:
+-Training set - set of example for learning (60-80% of data)
+-Validation set - set for tune parameters of classifiers (cross validation set) (20-30% of data)
+-Test set - only used for getting the result of the fully trained classifier (20% of data)
+
+Key Messages
+-Evaluation plan at the beginning of the project - separate the amateusrs and pros
+-Realistic evaluation - should reflect real life scenarios
+-External evaluation by third party is the gold standard (not always realistic)
+
+-> Cross Validation - Method for evaluation performance
+When you dont have a Hold out evaluation plan
+When the dataset is small, and you want to use all the data for good training
+You should split the data randomly
+Create a K-fold equal size partition of the dataset
+For each of the experiments, use k-1 folds for training and the remaining one for testing.
+It is like K independent experience.
+common choice is 5 to 10 folds cross validation
+Smaller datasets - prefer bigger k 
+Leave-one-out Cross Validation - special case of cross validation where you split the data into K folds where K = Number of samples. (LOOCV)
+Usually you average your performance with the average of your experiments.
+Another performance metric is the squared errors of the predictions
+The main drawbacks is that partiotioning is not always is easy to do and can be ledd believable than hould-out data
+It is usually useful for small training dataset
+
+-> Dealing with imbalanced classes
+Sometimes classes have very unequal frequency - Imbalanced Classes
+Cancer Diagnosis: 99% healthy, 1% disease
+Security: > 99.9% non terrorists
+The problem is that you really need to identify the 1% that as cancer.
+Basic approach is try to balance this classes:
+-Down sample majority classes: random take out the
+-Up sample minority classes: replicate minority samples.
+-Bootstraping is down sampling with replacement. (Basis of random forest)
+-Reweighting: a common example is to consider the number of samples in a specific class
+
+-->Overfitting and Underfitting
+In Underfitting has high bias, the training errors and test errors are high - you need a more complex model.
+Overfitting has high variance.It cannot generalize well to new data. It memorizes the data that we are training.
+Overfitting is caused by too little data or not enoigh data.
+Big data: The more data, the more complex a model we can use. Typically to many features.
+Diversity: Redundant data does not add indormation and thus does not improve the model.
+Plot learning curves toi spot the overfitting - point when test error start to grow and training error continue to go down.
+Addressing overfiting:
+-More data
+-Reduces number of features or dimension
+-Regularization
+
+--> Dimensionality and Feature Selection
+Curse of dimensionality happens when you have a large dimension for the ammount of data that you have.
+A lt of methos have at least O(n*d^2) complexity
+The more dimensions you have, the more sparse is your data.
+It is harder to visualize when dimension grows.
+To void the curse of dimensionality:
+Possible solutions for Reducing Dimensions: 
+-Feature Selection
+-Use dimension reduction with Algos like PCA (these algos will through out some info)
+
+->Features Selection
+choice of subset of features used in the learning model
+is not always necessary
+Reduces overfitting risk and dimensionality
+It is a search/optimization problem - NP hard and ofter unrealistic
+Requires score dor ranking features
+Types of feature selection:
+-Filter method: choose features based on score (entropy or variance for example). 
+The measure should have some kind of correlation with the label.
+Use Mutual information(preferable) or Pearson correlation. 
+Keep only one of two higly correlated features.
+-Wrapper method: uses a predictive model to score feature subsets - better than previous but demands computational power.
+It is very computational expensive. Various heuristic search strategies are used. Foward and Backward selection. Usually use Random Forest
+-Embedded method: perform variable selection in the course of model training (decision tree or Black Hole Model, for example)
+
+->Dimensionality Reduction
+Compress Data, Visualize, Generate new features and improve ML performance.
+PCA is the number 1 method for dimensionality reduction

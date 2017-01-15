@@ -1,0 +1,46 @@
+Resources:
+1) Databricks (Registration to the Platform):
+https://databricks.com/try-databricks
+(Please create an account and start using the Community Edition)
+Sign in link in case you already have an account: 
+https://community.cloud.databricks.com
+2) Spark's Official Web Site:
+http://spark.apache.org/
+Spark Examples: http://spark.apache.org/examples.html
+3) Spark's YouTube channel:
+https://www.youtube.com/channel/UCRzsq7k4-kT-h3TDUBQ82-w
+4) Online resources of the Databricks Platform:
+https://databricks.com/resources
+5) Spark - Word Count example screencast:
+https://www.youtube.com/watch?v=HQTB3hlLD6E
+6) "Exploring Wikipedia With Apache Spark" - Advanced Training by Sameer Farooqui 
+A really comprehensive explanation of the Databricks platform and on using it.
+https://www.youtube.com/watch?v=vlVnSpJ6TDE
+7) Documentation on all of the Spark platform on Databricks:
+https://docs.databricks.com/index.html
+
+Exercise (Recommended notebooks to go over): 
+(Please import all of the wanted Notebooks to your own Databricks environment)
+
+* Go over the cells in these notebooks and feel free to run them all.
+(Note: at first there will be no running cluster, once you run your first cell, then it'll try to spin up a cluster for you, the cluster with be terminated automatically when now used for awhile.
+
+1) On the Databricks Platform (your user's one) go over these notebooks)
+"Introduction to Apache Spark on Databricks"
+"Databricks for Data Scientists"
+
+2) Quick Start Using Python
+https://cdn2.hubspot.net/hubfs/438089/notebooks/Quick_Start/Quick_Start_Using_Python.html
+
+3) Data Exploration on Databricks (Setup) + Data Exploration on Databricks
+https://cdn2.hubspot.net/hubfs/438089/notebooks/Samples/Data_Exploration/Data_Exploration_on_Databricks_Setup.html
+https://cdn2.hubspot.net/hubfs/438089/notebooks/Samples/Data_Exploration/Data_Exploration_on_Databricks.html
+
+4) 2015 Median Home Price by State
+https://cdn2.hubspot.net/hubfs/438089/notebooks/Pop._vs._Price_Multi-Chart.html
+
+5) Structured Streaming using Python DataFrames API
+https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/4012078893478893/3202384642551446/5985939988045659/latest.html
+
+*** You can try other notebooks too in the next link:
+https://databricks.com/resources/type/example-notebooks

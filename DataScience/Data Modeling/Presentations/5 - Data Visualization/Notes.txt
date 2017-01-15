@@ -1,0 +1,13 @@
+Automatic - WordPress - Data Visualization
+Boris gorelik, Phd 
+boris@gorelik.net 
+https://www.youtube.com/watch?v=5OfLTddasAA
+https://randomstratum.wordpress.com/
+
+tools for python 
+matplotlib
+Seaborn
+Bokeh
+
+http://tools.medialab.sciences-po.fr/iwanthue/
+https://www.youtube.com/watch?v=xAoljeRJ3lU

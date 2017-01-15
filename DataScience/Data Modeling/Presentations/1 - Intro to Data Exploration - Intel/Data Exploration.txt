@@ -1,0 +1,62 @@
+CRISP-DM -> phases of Cycle of Machine Learning process
+1 - Business Understanding
+2 - Data Understanding
+3 - Data Preparation
+4 - Modelinh
+5 - Evaluation
+6 - Deployment
+The phases are not strict and can move.
+
+Problem of too much Data--> 100 rows and 1000 columns
+A possible solution is PCA (Principle Component Reduction to merge attributes into one dimension)
+Another olution is feature selection (removing redundant columns)
+The problem of to many columns is that it generates overfitting.
+
+Not always is needed to fill missing values (some algos take care of it)
+Data transformation-> normalization to get the proper scale
+the difference between categorical and ordinal data is that in ordinal the order is relevant
+ordinal -> satisfaction (2/5)
+categorical-> colors
+
+Tip: Spider ML IDE for Python -> similar for R Studio -> already installed in Anaconda-> just launch spyder on the cmd
+
+the distance measure (euclidian or centroid) is important for distance for algos like K-mean
+Interesting Startup - DataRobot tool
+
+Correlations refers to any broad of class of statistical relationships involving dependence
+Pearson Correlation - measures - Linear dependence
+Spearman Correlation - how well variables can be described as a monotonic function (use ranks instead of the values itself to calculate)
+Kendalls Tau Correlation - measures the ordering dependencies (measure the rank correlation - up and down of variables)
+Biserial Correlation - dependency between categorical variables.
+
+for pearson correlation
+r(x,y) = 0 -> Uncorelated
+r(x,y) = 0 -> Does not means that the variables are independent
+correlation has a big problem with outliers
+
+Kolmogorov-Smirnoff test - Veify if two sets came from the same distribution
+
+One solution for the missing data is to sample another value from the original distribution (if you know that one) 
+
+Grubbs Test - Detecting outliers on the data (each attribute at a time)
+Outliers in more than one dimension can be done with K mean Neighbors.
+
+Normalization and data transformation is very important when aplying algorithms that regards on distance metrics.
+Linear Transformation does not work.
+
+Methods of normalizing
+z-normal normalization is the most used one (x-x_)/std_dev
+there is also the Min/Max normalization (range from [-1,1]), log normalizarion (ranged over severed orders of magnitude)
+When entropu is low, prefer to use z-normal normalization
+When entropy is higher, prefer to use the Min/MAx normalization
+
+Discretization is partitioning continuos variable into minor partitions
+Many ways to do that, for example Equal-width partitioning, Equal-Depth(based on frequency of values) 
+
+Unbalanced data
+If you have biased data, a possible solution is replicating the minor frequecy variables in order to try to get to the algorithm that detects it.
+The process descrived above is named oversampling.
+
+MRMR - example of filter selection for ignoring the columns that are highly correlated with the targer
+Filter selection is different from filter transformation (PCA for example-merge attributes in a single variable changing dimension)
+

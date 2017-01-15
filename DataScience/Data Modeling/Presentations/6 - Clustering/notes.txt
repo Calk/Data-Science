@@ -1,0 +1,54 @@
+--->Unsupervised Learning
+In k-means Algorithm is very important to normalize data since it relies on mean calculation.
+The initialization of the points are very significants for the final output of the Algorithm.
+BIC = difference between the likelihood of the model and the complexity of the model.
+
+Hierarquical cluster:
+start where every sample is a cluster and group pairs of every iteration.
+It is a bottom up approach.
+
+In Data Mining the task of finding frequent pattern in large databases is very important and 
+has been studied in large scale in the past few years. 
+Unfortunately, this task is computationally expensive, especially when a large number of patterns exist.
+The FP-Growth Algorithm is an efficient and scalable method
+for mining the complete set of frequent patterns by pattern fragment growth
+FP-Growth is faster than Apriori Algorithm.
+
+Higher Dimensions are always a problem for clustering. 
+Try to see if there are features that are not relevant for the cluster.
+
+Unupervised is very used in compuer vision for finding patterns in the images.
+It is also used for pretraining for deep neural networks.
+
+K-means has a lot of drawbacks and is not the best algorithm for clustering.
+
+In Gaussian Mixture Model - EM process of optimization, you calculate for each iteration the porbability of 
+each observation being part of one gaussian distribution or another - Tik parameter (soft labeling). On the other hand, K-means is hard labeling.
+The weight to each gaussian are calculated based on the dominance of one gaussian or another in our dataset.
+
+Another model that does not constrains the cluster to be distributed in a gaussian way is called Finite Mixture Models.
+ref - http://www.pymix.org/pymix/
+
+Getting lower value for Hopkings metric means that at least there are some pattern in the data
+You have to keeo the same distance measure for internal and external indexes.
+
+The Optics Algorithm solve the problem of DBSCAN of getting just one epsilon for all the clusters.
+The Optics starts with a lowers epsilon and go increasing until a cutoff parameter.
+Another algorithm is DENCLUE which consider a density function for each point in the dataset
+DBScan results does not depends on the initial conditions.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
